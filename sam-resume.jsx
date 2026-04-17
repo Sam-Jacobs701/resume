@@ -47,7 +47,7 @@ const TypewriterText = ({ text, delay = 0 }) => {
   );
 };
 
-const ScrollReveal = ({ children, delay = 0 }) => {
+const ScrollReveal = ({ children, delay = 0, style = {} }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -71,6 +71,7 @@ const ScrollReveal = ({ children, delay = 0 }) => {
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
         transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+        ...style,
       }}
     >
       {children}
@@ -563,7 +564,7 @@ export default function ResumeSite() {
               justifyContent: 'center',
               flexWrap: 'wrap',
             }}>
-              {['Azure', 'Product Management', 'Innovation', 'Automation'].map((tag, i) => (
+              {['Product Management', 'Financial Services', 'AI & Automation', 'Wealth Management'].map((tag, i) => (
                 <span
                   key={tag}
                   style={{
@@ -629,7 +630,7 @@ export default function ResumeSite() {
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
             }}>
-              Building the future of<br />financial technology
+              Building products that<br />transform financial services
             </h2>
           </ScrollReveal>
           
@@ -638,32 +639,31 @@ export default function ResumeSite() {
             gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))', 
             gap: isMobile ? '20px' : '32px' 
           }}>
-            <ScrollReveal delay={200}>
-              <GlowCard isMobile={isMobile}>
+            <ScrollReveal delay={200} style={{ height: '100%' }}>
+              <GlowCard isMobile={isMobile} style={{ height: '100%' }}>
                 <p style={{
                   fontFamily: "'IBM Plex Sans', sans-serif",
                   fontSize: isMobile ? '15px' : '17px',
                   lineHeight: '1.8',
                   color: '#cbd5e1',
                 }}>
-                  With over a decade of experience driving innovation in financial services, I bridge the gap between 
-                  technology and business strategy. At <span style={{ color: '#00ffd5' }}>Credigy</span>, I've led 
-                  transformative initiatives modernizing our technology stack and enabling data-driven decisions.
+                  With over a decade of experience in financial services product management, I own product roadmaps
+                  from discovery through delivery—translating complex business processes into clear requirements.
                 </p>
               </GlowCard>
             </ScrollReveal>
-            
-            <ScrollReveal delay={400}>
-              <GlowCard isMobile={isMobile}>
+
+            <ScrollReveal delay={400} style={{ height: '100%' }}>
+              <GlowCard isMobile={isMobile} style={{ height: '100%' }}>
                 <p style={{
                   fontFamily: "'IBM Plex Sans', sans-serif",
                   fontSize: isMobile ? '15px' : '17px',
                   lineHeight: '1.8',
                   color: '#cbd5e1',
                 }}>
-                  I'm passionate about leveraging emerging technologies—from Azure cloud infrastructure to AI-powered 
-                  automation—to solve complex business challenges. My approach combines strategic thinking with 
-                  hands-on technical execution.
+                  I lead cross-functional teams across engineering, data, and business stakeholders to
+                  integrate AI capabilities, modernize platforms, and ship solutions that drive measurable
+                  outcomes—navigating ambiguity and solving real user pain points.
                 </p>
               </GlowCard>
             </ScrollReveal>
@@ -747,7 +747,7 @@ export default function ResumeSite() {
             title="Director, Product Strategy"
             company="Credigy Solutions"
             period="NOV 2022 — PRESENT"
-            description="Managing the portfolio and roadmap for IT-supported applications, driving alignment between technology initiatives and business objectives. Leading strategic modernization efforts including Azure migration, Snowflake reporting transitions, and Master Data Management implementation."
+            description="Own the product portfolio and roadmap from discovery through delivery, driving alignment across engineering, data, design, and business teams. Lead cross-functional groups on enterprise solution delivery including Azure migration, Snowflake data platform transitions, and Master Data Management. Define success metrics, run agile ceremonies, and integrate AI-assisted development and prototyping into product workflows."
             delay={200}
             isMobile={isMobile}
           />
@@ -755,7 +755,7 @@ export default function ResumeSite() {
             title="Product Manager"
             company="Credigy Solutions"
             period="AUG 2018 — NOV 2022"
-            description="Led innovation efforts to accelerate the investment lifecycle through strategic automation. Oversaw initiatives from ideation through development and implementation, ensuring stakeholder adoption and change management success."
+            description="Managed multiple concurrent product initiatives from ideation through delivery, translating complex financial workflows into clear product requirements. Drove cross-functional collaboration across engineering and business teams, ensuring stakeholder adoption through structured change management and agile delivery practices."
             delay={400}
             isMobile={isMobile}
           />
@@ -763,7 +763,7 @@ export default function ResumeSite() {
             title="Senior Business Systems Analyst"
             company="Credigy Solutions"
             period="DEC 2017 — AUG 2018"
-            description="Integrated core revenue-generating business processes into comprehensive web applications. Built intelligent automation workflows and enabled data-driven decisions through enterprise content analysis."
+            description="Shipped products that integrated core revenue-generating processes into enterprise web applications. Built intelligent automation workflows and enabled data-driven decisions through metrics dashboards and content analysis."
             delay={600}
             isMobile={isMobile}
           />
@@ -832,7 +832,7 @@ export default function ResumeSite() {
               <SkillCard
                 icon={<span style={{ color: '#00ffd5' }}>☁️</span>}
                 title="Cloud & Infrastructure"
-                skills={['Azure', 'Snowflake', 'ETL Pipelines', 'Cloud Migration', 'Data Architecture']}
+                skills={['Azure', 'Snowflake', 'ETL Pipelines', 'Cloud Migration', 'Data Architecture', 'B2B SaaS']}
                 color="#00ffd5"
                 isMobile={isMobile}
               />
@@ -842,7 +842,7 @@ export default function ResumeSite() {
               <SkillCard
                 icon={<span style={{ color: '#a78bfa' }}>🎯</span>}
                 title="Product Strategy"
-                skills={['Roadmap Planning', 'Stakeholder Alignment', 'Business Analysis', 'Requirements']}
+                skills={['Roadmap Ownership', 'Stakeholder Alignment', 'Business Analysis', 'Requirements', 'Success Metrics']}
                 color="#a78bfa"
                 isMobile={isMobile}
               />
@@ -852,7 +852,7 @@ export default function ResumeSite() {
               <SkillCard
                 icon={<span style={{ color: '#f97316' }}>⚡</span>}
                 title="Automation & AI"
-                skills={['Process Automation', 'RPA', 'Machine Learning', 'Intelligent Workflows']}
+                skills={['AI-Assisted Development', 'Process Automation', 'AI Prototyping', 'Intelligent Workflows']}
                 color="#f97316"
                 isMobile={isMobile}
               />
@@ -862,7 +862,7 @@ export default function ResumeSite() {
               <SkillCard
                 icon={<span style={{ color: '#22d3ee' }}>👥</span>}
                 title="Leadership"
-                skills={['Change Management', 'Team Development', 'Cross-functional Collaboration']}
+                skills={['Change Management', 'Team Development', 'Cross-functional Leadership', '10+ Person Teams']}
                 color="#22d3ee"
                 isMobile={isMobile}
               />
@@ -872,7 +872,7 @@ export default function ResumeSite() {
               <SkillCard
                 icon={<span style={{ color: '#4ade80' }}>🔄</span>}
                 title="Agile & Delivery"
-                skills={['Scrum', 'Jira', 'Sprint Planning', 'Vendor Management']}
+                skills={['Scrum', 'Jira', 'Sprint Planning', 'Agile Ceremonies', 'Vendor Management']}
                 color="#4ade80"
                 isMobile={isMobile}
               />
@@ -902,6 +902,7 @@ export default function ResumeSite() {
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? '8px' : '12px' }}>
                 {[
+                  'CFP® Education (UGA Terry)',
                   'PMP®',
                   'Certified ScrumMaster',
                   'Azure Fundamentals',
@@ -1068,8 +1069,8 @@ export default function ResumeSite() {
               marginBottom: isMobile ? '32px' : '48px',
               lineHeight: '1.7',
             }}>
-              Ready to discuss how technology can transform your business? 
-              I'm always open to new opportunities and conversations.
+              Passionate about building products at the intersection of technology and
+              financial services. Let's connect.
             </p>
           </ScrollReveal>
 
@@ -1155,7 +1156,7 @@ export default function ResumeSite() {
               color: '#475569',
               letterSpacing: '1px',
             }}>
-              © 2024 Sam Jacobs • Alpharetta, GA
+              © 2025 Sam Jacobs • Alpharetta, GA
             </div>
           </ScrollReveal>
         </div>
