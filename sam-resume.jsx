@@ -117,8 +117,6 @@ export default function ResumeSite() {
           <Link href="mailto:sam@samjacobs.io">sam@samjacobs.io</Link>
           {' · '}
           <Link href="https://linkedin.com/in/sdjacobs">LinkedIn</Link>
-          {' · '}
-          <Link href="/Sam_Jacobs_Resume.pdf">Resume</Link>
         </section>
 
         <Section title="Now">
