@@ -171,7 +171,9 @@ export default function ResumeSite() {
         </Section>
 
         <Section title="Certifications">
-          <div style={{ fontSize: 15, color: colors.muted }}>PMP</div>
+          <div style={{ fontSize: 15, color: colors.muted }}>
+            Project Management Professional (PMP)®
+          </div>
         </Section>
 
         <footer
