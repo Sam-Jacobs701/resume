@@ -166,17 +166,12 @@ export default function ResumeSite() {
 
         <Section title="Education">
           <div style={{ fontSize: 15 }}>
-            <div>B.S. Business Management, North Dakota State University</div>
-            <div style={{ color: colors.muted, marginTop: 2 }}>
-              CFP® coursework, UGA Terry College of Business
-            </div>
+            B.S. Business Management, North Dakota State University
           </div>
         </Section>
 
         <Section title="Certifications">
-          <div style={{ fontSize: 15, color: colors.muted }}>
-            PMP · Certified ScrumMaster · Azure Fundamentals · MIT AI Strategy
-          </div>
+          <div style={{ fontSize: 15, color: colors.muted }}>PMP</div>
         </Section>
 
         <footer
