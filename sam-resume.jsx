@@ -164,6 +164,19 @@ export default function ResumeSite() {
           </div>
         </Section>
 
+        <Section title="Building">
+          <div style={{ fontSize: 15, lineHeight: 1.6 }}>
+            <div>
+              <Link href="https://clearlinecivic.com">Clearline Civic</Link> —
+              road management software for township boards: road inventory,
+              maintenance planning, and budgeting in one place.
+            </div>
+            <div style={{ marginTop: 6, color: colors.muted }}>
+              Built with React, PostgreSQL, and AI embeddings.
+            </div>
+          </div>
+        </Section>
+
         <Section title="Education">
           <div style={{ fontSize: 15 }}>
             B.S. Business Management, North Dakota State University
